@@ -46,26 +46,3 @@ else:
     price_train = 0.06 * number_km
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-if abc = 1:
-    if bca = 1:
-        if bba = 1
-            pass
-        elif aaa = 1
-            continue
-    elif bbbassd == 1
-    pass
-else:
-    this
