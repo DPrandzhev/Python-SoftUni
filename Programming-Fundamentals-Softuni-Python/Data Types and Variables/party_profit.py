@@ -1,5 +1,3 @@
-from math import floor
-
 group_size = int(input())
 days_input = int(input())
 coins = 0
