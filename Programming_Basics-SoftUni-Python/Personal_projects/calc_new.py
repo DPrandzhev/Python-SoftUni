@@ -139,7 +139,7 @@ class Calculator:
 
             self.total_expression = ""
         except Exception as e:
-            self.current_expression = "ErrRRroRrr"
+            self.current_expression = "::error::"
         finally:
             self.update_label()
 
