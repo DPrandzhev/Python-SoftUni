@@ -1,4 +1,4 @@
-`number_one = int(input())
+number_one = int(input())
 number_two = int(input())
 operator = input()
 result = 0
@@ -41,4 +41,4 @@ elif operator == "/":
     print(f"{number_one} {operator} {number_two} = {result:.2f}")
 
 elif operator == "%":
-    print(f"{number_one} {operator} {number_two} = {result}")`
+    print(f"{number_one} {operator} {number_two} = {result}")
