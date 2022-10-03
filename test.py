@@ -20,12 +20,3 @@ for i in range(entries):
     gui.typewrite(word)
     gui.press('Enter')
     time.sleep(delay_in_seconds) #timer between each "print of a pass"
-
-
-
-
-# for i in range(entries):
-#     word = "dumkai sa otzad 4akal"
-#     gui.typewrite(word)
-#     gui.press('Enter')
-#     time.sleep(delay_in_seconds) #timer between each "print of a pass"
