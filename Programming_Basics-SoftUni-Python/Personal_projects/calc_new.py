@@ -139,7 +139,7 @@ class Calculator:
 
             self.total_expression = ""
         except Exception as e:
-            self.current_expression = "PetkoEPi4"
+            self.current_expression = "Div by 0"
         finally:
             self.update_label()
 
