@@ -8,9 +8,9 @@ count_toys = 0
 reket = 0
 for i in range(1, age_lilly + 1):
     if i % 2 == 0:
-        reket = reket + 1
-        money_pool = (money_pool + money)
-        money = money + 10
+        reket += 1
+        money_pool += money
+        money += 10
     else:
         count_toys = count_toys + 1
 
