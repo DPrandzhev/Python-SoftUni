@@ -14,7 +14,7 @@ def rand_word(size):
 
     return generate_message
 
-time.sleep(10) #time delay in order to switch to a notepad
+time.sleep(5) #time delay in order to switch to a notepad
 
 for i in range(entries):
     word = rand_word(password_len)
