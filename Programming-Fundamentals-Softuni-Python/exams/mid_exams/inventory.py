@@ -2,6 +2,7 @@ journal = input().split(", ")
 command = input()
 inventory = journal
 while command != "Craft!":
+
     action, item = command.split(" - ")
     if action == "Collect":
         if item in inventory:
