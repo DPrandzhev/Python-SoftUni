@@ -7,7 +7,7 @@ password_len = int(input("How long: "))
 delay_in_seconds = int(input("Delay: "))
 
 def rand_word(size):
-    generate_message = ' '.join([random.choice(
+    generate_message = ''.join([random.choice(
         string.ascii_lowercase + string.ascii_uppercase \
         + string.digits + string.punctuation)
         for n in range(size)])
