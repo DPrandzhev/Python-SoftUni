@@ -12,8 +12,8 @@ while True:
         current_coordinates = pg.position()
 
     if afk_counter > 10:
-        x = random.randint(1, 768)
-        y = random.randint(1, 768)
+        x = random.randint(1, 1920)
+        y = random.randint(1, 1080)
         pg.moveTo(x, y, 2)
         current_coordinates = pg.position()
 
