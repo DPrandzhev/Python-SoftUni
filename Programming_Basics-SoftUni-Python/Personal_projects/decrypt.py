@@ -1,20 +1,29 @@
+import base64
 from cryptography.fernet import Fernet
+from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.primitives import hashes
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
-def load_key():
-    """
-    Load the previously generated key
-    """
-    return open("secret.key", "rb").read()
+# Prompt the user for the encrypted message
+encrypted_message = input("Enter the encrypted message: ")
 
-def decrypt_message(encrypted_message):
-    """
-    Decrypts an encrypted message
-    """
-    key = load_key()
-    f = Fernet(key)
-    decrypted_message = f.decrypt(encrypted_message)
+# Prompt the user for the password
+password = input("Enter the password: ").encode()
 
-    print(decrypted_message.decode())
+# Use the password and the same salt to recreate the key
+salt = b'salt_'
+kdf = PBKDF2HMAC(
+    algorithm=hashes.SHA256,
+    length=32,
+    salt=salt,
+    iterations=100000,
+    backend=default_backend()
+)
+key = base64.urlsafe_b64encode(kdf.derive(password))
 
-if __name__ == "__main__":
-    decrypt_message(b'gAAAAABesCUIAcM8M-_Ik_-I1-JD0AzLZU8A8-AJITYCp9Mc33JaHMnYmRedtwC8LLcYk9zpTqYSaDaqFUgfz-tcHZ2TQjAgKKnIWJ2ae9GDoea6tw8XeJ4=')
+# Use the key to decrypt the message
+f = Fernet(key)
+decrypted_message = f.decrypt(encrypted_message).decode()
+
+# Print the decrypted message
+print(decrypted_message)

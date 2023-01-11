@@ -1,6 +1,8 @@
-a = [5, 3, 2, 1, 7]
-total_sum = 0
-for num in a:
-    total_sum += num
+initial_insults = input().split('. /n')
 
-print(total_sum)
+list = []
+
+for i in initial_insults:
+    list.append(i)
+
+print(list)

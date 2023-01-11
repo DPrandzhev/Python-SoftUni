@@ -4,7 +4,7 @@ import random
 import string
 entries = int(input("Number of SPAM Unleashed: "))
 password_len = int(input("How long: "))
-delay_in_seconds = int(input("Delay: "))
+delay_in_seconds = float(input("Delay: "))
 
 def rand_word(size):
     generate_message = ''.join([random.choice(
