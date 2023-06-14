@@ -2,7 +2,7 @@ import pyautogui
 from pynput.keyboard import *
 
 #  ======== settings ========
-delay = 5  # in seconds
+delay = 0.5  # in seconds
 resume_key = Key.f1
 pause_key = Key.f2
 exit_key = Key.esc
@@ -26,7 +26,6 @@ def on_press(key):
 
 
 def display_controls():
-    print("// AutoClicker by iSayChris")
     print("// - Settings: ")
     print("\t delay = " + str(delay) + ' sec' + '\n')
     print("// - Controls:")

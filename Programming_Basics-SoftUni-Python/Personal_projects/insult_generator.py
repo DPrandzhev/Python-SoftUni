@@ -18,8 +18,7 @@ def print_random_element():
     gui.press('Enter')
 
 
-# Use the `add_hotkey` method to specify the key that will trigger the function
 keyboard.add_hotkey('f12', print_random_element)
 
-# Run the script in the background until the user presses the `esc` key
+
 keyboard.wait('f11')

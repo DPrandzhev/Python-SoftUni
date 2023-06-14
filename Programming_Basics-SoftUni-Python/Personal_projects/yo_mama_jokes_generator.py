@@ -9,7 +9,7 @@ def read_jokes_from_file():
 
 elements = read_jokes_from_file()
 
-def print_random_element():
+def print_random_yomama():
     element = random.choice(elements)
     gui.press('Enter')
 
@@ -17,5 +17,7 @@ def print_random_element():
     gui.press('Enter')
     gui.press('Enter')
 
-keyboard.add_hotkey('f2', print_random_element)
+
+
+keyboard.add_hotkey('f2', print_random_yomama)
 keyboard.wait('f12')
